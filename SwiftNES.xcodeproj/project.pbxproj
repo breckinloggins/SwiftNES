@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F85B545F19C4F088008C3524 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B545E19C4F088008C3524 /* main.swift */; };
+		F85B546119C4F088008C3524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B546019C4F088008C3524 /* AppDelegate.swift */; };
+		F85B546319C4F088008C3524 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85B546219C4F088008C3524 /* Images.xcassets */; };
+		F85B546619C4F088008C3524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85B546419C4F088008C3524 /* MainMenu.xib */; };
+		F85B547219C4F088008C3524 /* SwiftNESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B547119C4F088008C3524 /* SwiftNESTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F85B546C19C4F088008C3524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F85B545119C4F088008C3524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85B545819C4F088008C3524;
+			remoteInfo = SwiftNES;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F85B545919C4F088008C3524 /* SwiftNES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNES.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85B545D19C4F088008C3524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85B545E19C4F088008C3524 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F85B546019C4F088008C3524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F85B546219C4F088008C3524 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F85B546519C4F088008C3524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F85B546B19C4F088008C3524 /* SwiftNESTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNESTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85B547019C4F088008C3524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85B547119C4F088008C3524 /* SwiftNESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNESTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F85B545619C4F088008C3524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85B546819C4F088008C3524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F85B545019C4F088008C3524 = {
+			isa = PBXGroup;
+			children = (
+				F85B545B19C4F088008C3524 /* SwiftNES */,
+				F85B546E19C4F088008C3524 /* SwiftNESTests */,
+				F85B545A19C4F088008C3524 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F85B545A19C4F088008C3524 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F85B545919C4F088008C3524 /* SwiftNES.app */,
+				F85B546B19C4F088008C3524 /* SwiftNESTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F85B545B19C4F088008C3524 /* SwiftNES */ = {
+			isa = PBXGroup;
+			children = (
+				F85B546019C4F088008C3524 /* AppDelegate.swift */,
+				F85B546219C4F088008C3524 /* Images.xcassets */,
+				F85B546419C4F088008C3524 /* MainMenu.xib */,
+				F85B545C19C4F088008C3524 /* Supporting Files */,
+			);
+			path = SwiftNES;
+			sourceTree = "<group>";
+		};
+		F85B545C19C4F088008C3524 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F85B545D19C4F088008C3524 /* Info.plist */,
+				F85B545E19C4F088008C3524 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F85B546E19C4F088008C3524 /* SwiftNESTests */ = {
+			isa = PBXGroup;
+			children = (
+				F85B547119C4F088008C3524 /* SwiftNESTests.swift */,
+				F85B546F19C4F088008C3524 /* Supporting Files */,
+			);
+			path = SwiftNESTests;
+			sourceTree = "<group>";
+		};
+		F85B546F19C4F088008C3524 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F85B547019C4F088008C3524 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F85B545819C4F088008C3524 /* SwiftNES */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85B547519C4F088008C3524 /* Build configuration list for PBXNativeTarget "SwiftNES" */;
+			buildPhases = (
+				F85B545519C4F088008C3524 /* Sources */,
+				F85B545619C4F088008C3524 /* Frameworks */,
+				F85B545719C4F088008C3524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftNES;
+			productName = SwiftNES;
+			productReference = F85B545919C4F088008C3524 /* SwiftNES.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F85B546A19C4F088008C3524 /* SwiftNESTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85B547819C4F088008C3524 /* Build configuration list for PBXNativeTarget "SwiftNESTests" */;
+			buildPhases = (
+				F85B546719C4F088008C3524 /* Sources */,
+				F85B546819C4F088008C3524 /* Frameworks */,
+				F85B546919C4F088008C3524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85B546D19C4F088008C3524 /* PBXTargetDependency */,
+			);
+			name = SwiftNESTests;
+			productName = SwiftNESTests;
+			productReference = F85B546B19C4F088008C3524 /* SwiftNESTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F85B545119C4F088008C3524 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Breckin Loggins";
+				TargetAttributes = {
+					F85B545819C4F088008C3524 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F85B546A19C4F088008C3524 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F85B545819C4F088008C3524;
+					};
+				};
+			};
+			buildConfigurationList = F85B545419C4F088008C3524 /* Build configuration list for PBXProject "SwiftNES" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F85B545019C4F088008C3524;
+			productRefGroup = F85B545A19C4F088008C3524 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F85B545819C4F088008C3524 /* SwiftNES */,
+				F85B546A19C4F088008C3524 /* SwiftNESTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F85B545719C4F088008C3524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85B546319C4F088008C3524 /* Images.xcassets in Resources */,
+				F85B546619C4F088008C3524 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85B546919C4F088008C3524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F85B545519C4F088008C3524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85B546119C4F088008C3524 /* AppDelegate.swift in Sources */,
+				F85B545F19C4F088008C3524 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85B546719C4F088008C3524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85B547219C4F088008C3524 /* SwiftNESTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F85B546D19C4F088008C3524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F85B545819C4F088008C3524 /* SwiftNES */;
+			targetProxy = F85B546C19C4F088008C3524 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F85B546419C4F088008C3524 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F85B546519C4F088008C3524 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F85B547319C4F088008C3524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F85B547419C4F088008C3524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F85B547619C4F088008C3524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftNES/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F85B547719C4F088008C3524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftNES/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F85B547919C4F088008C3524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftNESTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNES.app/Contents/MacOS/SwiftNES";
+			};
+			name = Debug;
+		};
+		F85B547A19C4F088008C3524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftNESTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNES.app/Contents/MacOS/SwiftNES";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F85B545419C4F088008C3524 /* Build configuration list for PBXProject "SwiftNES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85B547319C4F088008C3524 /* Debug */,
+				F85B547419C4F088008C3524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85B547519C4F088008C3524 /* Build configuration list for PBXNativeTarget "SwiftNES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85B547619C4F088008C3524 /* Debug */,
+				F85B547719C4F088008C3524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F85B547819C4F088008C3524 /* Build configuration list for PBXNativeTarget "SwiftNESTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85B547919C4F088008C3524 /* Debug */,
+				F85B547A19C4F088008C3524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F85B545119C4F088008C3524 /* Project object */;
+}
