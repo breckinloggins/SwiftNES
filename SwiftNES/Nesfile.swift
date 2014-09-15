@@ -31,40 +31,107 @@ class Nesfile {
     let data = NSData(contentsOfFile: self.url.path!)
     Logger.info("Loaded \(self.url) (\(data.length) bytes)")
     
-    //self.header = readHeader()
+    if let hdr = readHeader(data) {
+      Logger.info("Valid iNES ROM")
+      Logger.info("\tPRG ROM 16KB Pages: \(hdr.prg_size)")
+      Logger.info("\tCHR ROM 8KB Pages: \(hdr.chr_size)")
+      Logger.info("\tPRG RAM 8KB Pages: \(hdr.prg_ram_size)")
+      
+      if hdr.flags6 & NESFlags6.TrainerMask == NESFlags6.TrainerMask {
+        Logger.fail("ROMs with Trainer Sections are not supported")
+        return
+      }
+      
+      if hdr.flags6 & NESFlags6.BatteryMask == NESFlags6.BatteryMask {
+        Logger.info("\tROM supports a battery")
+      }
+      
+      let mapper = (hdr.flags7 & NESFlags7.UpperMapperMask) | (hdr.flags6 & NESFlags6.LowerMapperMask)
+      Logger.info("\tMapper number is \(mapper)")
+      if mapper > 0 {
+        Logger.fail("Advanced (non-zero) mappers are not currently supported")
+        return
+      }
+      
+      let inesVersion = (hdr.flags7 & NESFlags7.NES20Mask) >> 2
+      Logger.info("\tiNES Version \(inesVersion+1)")
+      if inesVersion > 0 {
+        Logger.fail("Unsupported iNES Version")
+        return
+      }
+      
+      let mirroring = hdr.flags6 & NESFlags6.MirroringMask
+      switch mirroring {
+      case 0: Logger.info("\tROM is horizontally mirrored")
+      case 1: Logger.info("\tROM is vertically mirrored")
+      default:
+        Logger.fail("Unsupported mirroring mode \(mirroring)")
+        return
+      }
+      
+      self.header = hdr
+    }
     
   }
   
-  private func readHeader() -> Header? {
-    return Header(magic: "", prg_size: 0, chr_size: 0, flags6: 0, flags7: 0, prg_ram_size: 0, flags9: 0)
+  private func readHeader(data : NSData) -> Header? {
+    if data.length < Header.HeaderSize {
+      Logger.fail("Supposed iNES file is too small to contain a valid header")
+      return nil
+    }
+    
+    let magic = NSString(data: data.subdataWithRange(NSMakeRange(0, 4)), encoding: NSUTF8StringEncoding)
+    if magic != "NES\u{1A}" {
+      Logger.fail("iNES header magic should be 'NES\u{1A}' but is \(magic)")
+      return nil
+    }
+    
+    var hdr = [UInt8](count: Header.HeaderSize - 4, repeatedValue: 0)
+    var headerRange = NSMakeRange(4, Header.HeaderSize - 4)
+    data.getBytes(&hdr, range: headerRange)
+    
+    if hdr[8] != 0 || hdr[9] != 0 || hdr[10] != 0 || hdr[11] != 0 {
+      Logger.fail("Non-zero data found in iNES header padding; probably not a valid iNES file")
+      return nil
+    }
+    
+    return Header(magic: magic,
+      prg_size: hdr[0],
+      chr_size: hdr[1],
+      flags6: hdr[2],
+      flags7: hdr[3],
+      prg_ram_size: hdr[4] == 0 ? 1 : hdr[4], // Compatibility
+      flags9: hdr[5])
   }
 }
 
 // MARK: iNES header flags
 extension Nesfile {
   private struct NESFlags6 {
-    static let MirroringMask    = 0b00001001
-    static let BatteryMask      = 0b00000010
-    static let TrainerMask      = 0b00000100
-    static let LowerMapperMask  = 0b11110000
+    static let MirroringMask : UInt8   = 0b00001001
+    static let BatteryMask : UInt8     = 0b00000010
+    static let TrainerMask : UInt8     = 0b00000100
+    static let LowerMapperMask : UInt8 = 0b11110000
   }
   
   private struct NESFlags7 {
-    static let VSUnisystemMask  = 0b00000001
-    static let Playchoice10Mask = 0b00000010
-    static let NES20Mask        = 0b00001100
-    static let UpperMapperMask  = 0b11110000
+    static let VSUnisystemMask : UInt8  = 0b00000001
+    static let Playchoice10Mask : UInt8 = 0b00000010
+    static let NES20Mask : UInt8        = 0b00001100
+    static let UpperMapperMask : UInt8  = 0b11110000
   }
   
   private struct NESFlags9 {
-    static let TVSystemMask     = 0b00000001
-    static let ReservedMask     = 0b11111110
+    static let TVSystemMask : UInt8    = 0b00000001
+    static let ReservedMask : UInt8    = 0b11111110
   }
 }
 
 // MARK: iNES header
 extension Nesfile {
   private struct Header {
+    static let HeaderSize = 16
+    
     let magic : String          // Should be "NES" + 0x1A
     let prg_size: UInt8         // PRG ROM size in 16KB units
     let chr_size: UInt8         // CHR ROM size in 8KB units (or 0)
