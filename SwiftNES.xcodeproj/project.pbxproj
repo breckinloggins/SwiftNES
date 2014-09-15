@@ -12,6 +12,8 @@
 		F85B546319C4F088008C3524 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85B546219C4F088008C3524 /* Images.xcassets */; };
 		F85B546619C4F088008C3524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85B546419C4F088008C3524 /* MainMenu.xib */; };
 		F85B547219C4F088008C3524 /* SwiftNESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B547119C4F088008C3524 /* SwiftNESTests.swift */; };
+		F85B548019C5178D008C3524 /* Nesfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B547F19C5178D008C3524 /* Nesfile.swift */; };
+		F85B548219C51ECE008C3524 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B548119C51ECE008C3524 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		F85B546B19C4F088008C3524 /* SwiftNESTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNESTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85B547019C4F088008C3524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85B547119C4F088008C3524 /* SwiftNESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNESTests.swift; sourceTree = "<group>"; };
+		F85B547F19C5178D008C3524 /* Nesfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nesfile.swift; sourceTree = "<group>"; };
+		F85B548119C51ECE008C3524 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +79,12 @@
 		F85B545B19C4F088008C3524 /* SwiftNES */ = {
 			isa = PBXGroup;
 			children = (
+				F85B545C19C4F088008C3524 /* Supporting Files */,
 				F85B546019C4F088008C3524 /* AppDelegate.swift */,
 				F85B546219C4F088008C3524 /* Images.xcassets */,
 				F85B546419C4F088008C3524 /* MainMenu.xib */,
-				F85B545C19C4F088008C3524 /* Supporting Files */,
+				F85B547F19C5178D008C3524 /* Nesfile.swift */,
+				F85B548119C51ECE008C3524 /* Logger.swift */,
 			);
 			path = SwiftNES;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 			files = (
 				F85B546119C4F088008C3524 /* AppDelegate.swift in Sources */,
 				F85B545F19C4F088008C3524 /* main.swift in Sources */,
+				F85B548019C5178D008C3524 /* Nesfile.swift in Sources */,
+				F85B548219C51ECE008C3524 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
