@@ -25,9 +25,12 @@ class Nesfile {
   }
   
   private let header : Header?
+  var prgROM : [UInt8]
   
   private init(url : NSURL) {
     self.url = url
+    self.prgROM = []
+    
     let data = NSData(contentsOfFile: self.url.path!)
     Logger.info("Loaded \(self.url) (\(data.length) bytes)")
     
@@ -68,6 +71,11 @@ class Nesfile {
         Logger.fail("Unsupported mirroring mode \(mirroring)")
         return
       }
+      
+      let prgROMSize = 0x4000 * Int(hdr.prg_size)
+      self.prgROM = [UInt8](count: prgROMSize, repeatedValue: 0)
+      data.getBytes(&self.prgROM, range: NSMakeRange(Header.HeaderSize, prgROMSize))
+      Logger.info("Loaded PRG ROM (\(prgROMSize) bytes)")
       
       self.header = hdr
     }

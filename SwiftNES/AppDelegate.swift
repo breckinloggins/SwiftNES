@@ -10,10 +10,14 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+  let MemorySize = 0x10000
+  let PrgROMStart = 0xC000
+  
   @IBOutlet weak var window: NSWindow!
   @IBOutlet var textView: NSTextView!
   
   var nesfile : Nesfile?
+  var memory : Memory?
   
   func applicationDidFinishLaunching(aNotification: NSNotification?) {
     Logger.callback = loggingCallback
@@ -39,8 +43,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Logger.fail("Selected nes file could not be loaded because it was corrupt or invalid")
       } else {
         Logger.info("Nes file loaded successfully")
+        initializeNES()
       }
     }
+  }
+  
+  private func initializeNES() -> Bool {
+    if self.nesfile == nil {
+      Logger.fail("Tried to initialize NES with invalid or non-present NES file")
+      return false
+    }
+    
+    self.memory = Memory(capacity: MemorySize)
+    if !self.memory!.fill(PrgROMStart, data: self.nesfile!.prgROM) {
+      Logger.fail("Could not load PRG ROM into NES memory")
+      return false
+    }
+    
+    Logger.info("Loaded PRG ROM Bank 0 into NES memory at 0xC000")
+    
+    return true
   }
   
   private func loggingCallback(logType : LogType, message : String) {

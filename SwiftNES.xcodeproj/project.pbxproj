@@ -14,6 +14,8 @@
 		F85B547219C4F088008C3524 /* SwiftNESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B547119C4F088008C3524 /* SwiftNESTests.swift */; };
 		F85B548019C5178D008C3524 /* Nesfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B547F19C5178D008C3524 /* Nesfile.swift */; };
 		F85B548219C51ECE008C3524 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B548119C51ECE008C3524 /* Logger.swift */; };
+		F85B548419C68058008C3524 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B548319C68058008C3524 /* Memory.swift */; };
+		F85B548619C68AE8008C3524 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B548519C68AE8008C3524 /* CPU.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		F85B547119C4F088008C3524 /* SwiftNESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNESTests.swift; sourceTree = "<group>"; };
 		F85B547F19C5178D008C3524 /* Nesfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nesfile.swift; sourceTree = "<group>"; };
 		F85B548119C51ECE008C3524 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F85B548319C68058008C3524 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		F85B548519C68AE8008C3524 /* CPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				F85B546419C4F088008C3524 /* MainMenu.xib */,
 				F85B547F19C5178D008C3524 /* Nesfile.swift */,
 				F85B548119C51ECE008C3524 /* Logger.swift */,
+				F85B548319C68058008C3524 /* Memory.swift */,
+				F85B548519C68AE8008C3524 /* CPU.swift */,
 			);
 			path = SwiftNES;
 			sourceTree = "<group>";
@@ -216,7 +222,9 @@
 			files = (
 				F85B546119C4F088008C3524 /* AppDelegate.swift in Sources */,
 				F85B545F19C4F088008C3524 /* main.swift in Sources */,
+				F85B548619C68AE8008C3524 /* CPU.swift in Sources */,
 				F85B548019C5178D008C3524 /* Nesfile.swift in Sources */,
+				F85B548419C68058008C3524 /* Memory.swift in Sources */,
 				F85B548219C51ECE008C3524 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
